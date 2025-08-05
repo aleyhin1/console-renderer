@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\aleyh\\source\\repos\\ConsoleRenderer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|c:\\users\\aleyh\\source\\repos\\consolerenderer\\consolerenderer\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|solutionrelative:consolerenderer\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|c:\\users\\aleyh\\source\\repos\\consolerenderer\\consolerenderer\\code\\ishaderemulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|solutionrelative:consolerenderer\\code\\ishaderemulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|c:\\users\\aleyh\\source\\repos\\consolerenderer\\consolerenderer\\code\\shaders\\raymarchsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|solutionrelative:consolerenderer\\code\\shaders\\raymarchsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|c:\\users\\aleyh\\source\\repos\\consolerenderer\\consolerenderer\\code\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|solutionrelative:consolerenderer\\code\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|c:\\users\\aleyh\\source\\repos\\consolerenderer\\consolerenderer\\code\\ishaderemulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4163EDB8-C3C7-4FC4-B3FC-C1BBCDB0753F}|ConsoleRenderer\\ConsoleRenderer.csproj|solutionrelative:consolerenderer\\code\\ishaderemulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +34,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\aleyh\\source\\repos\\ConsoleRenderer\\ConsoleRenderer\\.gitignore",
+              "RelativeDocumentMoniker": "ConsoleRenderer\\.gitignore",
+              "ToolTip": "C:\\Users\\aleyh\\source\\repos\\ConsoleRenderer\\ConsoleRenderer\\.gitignore",
+              "RelativeToolTip": "ConsoleRenderer\\.gitignore",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-05T13:53:42.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "IShaderEmulator.cs",
               "DocumentMoniker": "C:\\Users\\aleyh\\source\\repos\\ConsoleRenderer\\ConsoleRenderer\\Code\\IShaderEmulator.cs",
               "RelativeDocumentMoniker": "ConsoleRenderer\\Code\\IShaderEmulator.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RaymarchSphere.cs",
               "DocumentMoniker": "C:\\Users\\aleyh\\source\\repos\\ConsoleRenderer\\ConsoleRenderer\\Code\\Shaders\\RaymarchSphere.cs",
               "RelativeDocumentMoniker": "ConsoleRenderer\\Code\\Shaders\\RaymarchSphere.cs",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "ConsoleRenderer\\Code\\Shaders\\RaymarchSphere.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T20:15:53.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T20:15:53.139Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Renderer.cs",
               "DocumentMoniker": "C:\\Users\\aleyh\\source\\repos\\ConsoleRenderer\\ConsoleRenderer\\Code\\Renderer.cs",
               "RelativeDocumentMoniker": "ConsoleRenderer\\Code\\Renderer.cs",
@@ -64,8 +80,7 @@
               "RelativeToolTip": "ConsoleRenderer\\Code\\Renderer.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwAIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T19:59:41.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T19:59:41.955Z"
             }
           ]
         }
