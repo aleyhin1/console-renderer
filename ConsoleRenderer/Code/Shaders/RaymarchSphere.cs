@@ -60,7 +60,7 @@ namespace ConsoleRenderer.Code.Shaders
 
         private static float GetLight(Vector3 p)
         {
-            Vector3 lightPos = new Vector3(MathF.Cos(Renderer.Time * 2.5f) * 2, 10, MathF.Sin(Renderer.Time * 2.5f) * 2);
+            Vector3 lightPos = new Vector3(0, 10, 0);
             Vector3 lightVec = Vector3.Normalize(lightPos - p);
             Vector3 N = GetNormal(p);
             float dif = Math.Clamp(Vector3.Dot(lightVec, N), 0, 1);

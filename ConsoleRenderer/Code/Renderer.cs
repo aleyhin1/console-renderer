@@ -28,18 +28,15 @@
                 watch.Restart();
                 HandleWindowChange();
 
-                for (int y = 0; y < WindowSize.Item2; y++)
+
+                Parallel.For(0, WindowSize.Item1 * WindowSize.Item2, index =>
                 {
-                    for (int x = 0; x < WindowSize.Item1; x++)
-                    {
-                        coord.Item1 = x;
-                        coord.Item2 = y;
-
-                        _selectedShader(coord, out float fragColor);
-                        DrawFragment(coord, fragColor);
-                    }
-                }
-
+                    (int, int) coord;
+                    coord.Item1 = index % WindowSize.Item1;
+                    coord.Item2 = index / WindowSize.Item1;
+                    _selectedShader(coord, out float fragColor);
+                    DrawFragment(coord, fragColor);
+                });
 
                 Console.SetCursorPosition(0, 0);
                 Console.Write(_renderBuffer,0, WindowSize.Item1 * WindowSize.Item2);
