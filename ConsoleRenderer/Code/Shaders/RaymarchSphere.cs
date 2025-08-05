@@ -78,6 +78,7 @@ namespace ConsoleRenderer.Code.Shaders
             uv.Y = (float)fragCoord.Item2 / Renderer.WindowSize.Item2;
             uv.X = uv.X * 2 - 1;
             uv.Y = uv.Y * 2 - 1;
+            uv.X *= Renderer.WindowSize.Item1 / Renderer.WindowSize.Item2;
 
             Vector3 ro = new Vector3(0, 2, -10f + MathF.Sin(Renderer.Time * 5f) * 5f);
             Vector3 rd = new Vector3(uv.X, uv.Y, 1);
