@@ -11,7 +11,7 @@
         private static int _renderMS = 16;
         private static char[] _colors = new char[] { ' ', '~', '<', '#', '$' };
         private static char[] _renderBuffer;
-        private static Shader[] _shaders = { RaymarchSphere.Shade };
+        private static Shader[] _shaders = { RaymarchSphere.Shade, Mandelbrot.Shade };
         private static Shader _selectedShader;
         private delegate void Shader((int, int) fragCoord, out float fragColor);
 
@@ -19,15 +19,12 @@
         {
             Init();
             Stopwatch watch = new Stopwatch();
-            _selectedShader = _shaders[0];
+            _selectedShader = _shaders[1];
             
-            (int, int) coord;
-
             while (true)
             {
                 watch.Restart();
                 HandleWindowChange();
-
 
                 Parallel.For(0, WindowSize.Item1 * WindowSize.Item2, index =>
                 {
