@@ -1,5 +1,7 @@
-﻿namespace ConsoleRenderer
+﻿namespace ConsoleRenderer.Code
 {
+    using ConsoleRenderer.Code.Shaders;
+
     public class Renderer
     {
         public static (int, int) WindowSize = (300, 150);
@@ -7,10 +9,14 @@
         private static int _renderMS = 16;
         private static char[] _colors = new char[] { ' ', '~', '<', '#', '$' };
         private static char[] _renderBuffer;
+        private static Shader[] _shaders = { RaymarchSphere.Shade };
+        private static Shader _selectedShader;
+        private delegate void Shader((int, int) fragCoord, out float fragColor);
 
         static async Task Main(string[] args)
         {
             Init();
+            _selectedShader = _shaders[0];
             
             (int, int) coord;
 
@@ -23,7 +29,7 @@
                         coord.Item1 = x;
                         coord.Item2 = y;
 
-                        RaymarchSphere.Shade(coord, out float fragColor);
+                        _selectedShader(coord, out float fragColor);
                         DrawFragment(coord, fragColor);
                     }
                 }
@@ -50,7 +56,7 @@
             int colIndex = (int)Math.Round(color * (_colors.Length - 1));
             char col = _colors[colIndex];
             int index;
-            index = (WindowSize.Item1 - coord.Item1 - 1) + (WindowSize.Item2 - coord.Item2 - 1) * WindowSize.Item1;
+            index = WindowSize.Item1 - coord.Item1 - 1 + (WindowSize.Item2 - coord.Item2 - 1) * WindowSize.Item1;
             _renderBuffer[index] = col;
         }
     }
