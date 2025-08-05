@@ -1,6 +1,8 @@
 ﻿namespace ConsoleRenderer.Code
 {
     using ConsoleRenderer.Code.Shaders;
+    using System.Diagnostics;
+    using System.Drawing;
 
     public class Renderer
     {
@@ -16,12 +18,14 @@
         static async Task Main(string[] args)
         {
             Init();
+            Stopwatch watch = new Stopwatch();
             _selectedShader = _shaders[0];
             
             (int, int) coord;
 
             while (true)
             {
+                watch.Restart();
                 HandleWindowChange();
 
                 for (int y = 0; y < WindowSize.Item2; y++)
@@ -36,9 +40,14 @@
                     }
                 }
 
+
                 Console.SetCursorPosition(0, 0);
                 Console.Write(_renderBuffer,0, WindowSize.Item1 * WindowSize.Item2);
-                await Task.Delay(_renderMS);
+
+                watch.Stop();
+                float waitTime = MathF.Max(_renderMS - watch.ElapsedMilliseconds, 0);
+                await Task.Delay((int)waitTime);
+                
                 Time += _renderMS / 1000f;
             }
         }
