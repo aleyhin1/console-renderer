@@ -48,7 +48,7 @@
                 float waitTime = MathF.Max(_renderMS - watch.ElapsedMilliseconds, 0);
                 await Task.Delay((int)waitTime);
                 
-                Time += _renderMS / 1000f;
+                Time += (waitTime + watch.ElapsedMilliseconds) / 1000f;
             }
         }
 

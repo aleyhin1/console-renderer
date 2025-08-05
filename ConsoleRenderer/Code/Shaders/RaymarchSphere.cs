@@ -23,7 +23,7 @@ namespace ConsoleRenderer.Code.Shaders
         {
             float result;
 
-            Vector3 ball1Pos = new Vector3(0, MathF.Sin(Renderer.Time * 10f), 0);
+            Vector3 ball1Pos = new Vector3(0, MathF.Sin(Renderer.Time * 2.5f), 0);
             float sdfBall1 = SDFBall(p, ball1Pos);
             float sdfFloor = SDFFloor(p);
             result = MathF.Min(sdfBall1, sdfFloor);
@@ -60,7 +60,7 @@ namespace ConsoleRenderer.Code.Shaders
 
         private static float GetLight(Vector3 p)
         {
-            Vector3 lightPos = new Vector3(MathF.Cos(Renderer.Time * 5) * 2, 10, MathF.Sin(Renderer.Time * 5) * 2);
+            Vector3 lightPos = new Vector3(MathF.Cos(Renderer.Time * 2.5f) * 2, 10, MathF.Sin(Renderer.Time * 2.5f) * 2);
             Vector3 lightVec = Vector3.Normalize(lightPos - p);
             Vector3 N = GetNormal(p);
             float dif = Math.Clamp(Vector3.Dot(lightVec, N), 0, 1);
@@ -80,7 +80,7 @@ namespace ConsoleRenderer.Code.Shaders
             uv.Y = uv.Y * 2 - 1;
             uv.X *= Renderer.WindowSize.Item1 / Renderer.WindowSize.Item2;
 
-            Vector3 ro = new Vector3(0, 2, -10f + MathF.Sin(Renderer.Time * 5f) * 5f);
+            Vector3 ro = new Vector3(0, 2, -10f + MathF.Sin(Renderer.Time) * 5f);
             Vector3 rd = new Vector3(uv.X, uv.Y, 1);
 
             float d = Raymarch(ro, rd);
