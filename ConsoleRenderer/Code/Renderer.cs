@@ -37,7 +37,7 @@
                 }
 
                 Console.SetCursorPosition(0, 0);
-                Console.Write(_renderBuffer);
+                Console.Write(_renderBuffer,0, WindowSize.Item1 * WindowSize.Item2);
                 await Task.Delay(_renderMS);
                 Time += _renderMS / 1000f;
             }
@@ -46,6 +46,7 @@
         private static void Init()
         {
             HandleWindowSize();
+            _renderBuffer = new char[Console.LargestWindowWidth * Console.LargestWindowHeight];
             Console.CursorVisible = false;
             Console.Clear();
         }
@@ -62,7 +63,6 @@
         {
             WindowSize.Item1 = Console.WindowWidth;
             WindowSize.Item2 = Console.WindowHeight;
-            _renderBuffer = new char[WindowSize.Item1 * WindowSize.Item2];
         }
 
         private static void DrawFragment((int, int) coord, float color)
